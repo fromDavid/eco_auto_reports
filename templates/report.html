@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <title>Relatório Económico</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    h1,h2 { margin: 0.3em 0; }
+    .kpis { display:flex; gap:16px; margin:12px 0 24px; }
+    .kpi { border:1px solid #ddd; padding:10px 14px; border-radius:8px; }
+    .chart { margin:16px 0; }
+    footer { margin-top: 32px; font-size: 12px; color:#555; }
+  </style>
+</head>
+<body>
+  <h1>Relatório Económico – Portugal</h1>
+  <p>Gerado em {{ generated_at }}.</p>
+
+  <h2>Inflação YoY</h2>
+  <div class="kpis">
+    <div class="kpi"><b>Último</b><br>{{ inflacao_ultimo }}%</div>
+    <div class="kpi"><b>Média 12m</b><br>{{ inflacao_media12 }}%</div>
+    <div class="kpi"><b>Volatilidade 12m</b><br>{{ inflacao_dp12 }} pp</div>
+  </div>
+  <div class="chart"><img src="{{ inflacao_chart_path }}" width="100%"></div>
+
+  <h2>PIB (índice)</h2>
+  <div class="chart"><img src="{{ pib_chart_path }}" width="100%"></div>
+
+  <h2>Desemprego</h2>
+  <div class="chart"><img src="{{ desemprego_chart_path }}" width="100%"></div>
+
+  <footer>Fonte: CSVs de exemplo. Substituir por integrações INE/Eurostat.</footer>
+</body>
+</html>
