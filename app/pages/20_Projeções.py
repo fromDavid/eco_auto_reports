@@ -174,7 +174,7 @@ for tab, d in zip(tabs, [df_base, df_pess, df_otim]):
     with tab:
         st.dataframe(d.style.format({
             "Vendas":"{:,.0f} €", "CV":"{:,.0f} €", "MB":"{:,.0f} €", "CF":"{:,.0f} €", "RO":"{:,.0f} €",
-            "EF":"{:,.0f}", "RLAI €":"{:,.0f}", "Imposto":"{:,.0f} €", "RL":"{:,.0f} €",
+            "EF":"{:,.0f} €", "RLAI":"{:,.0f} €", "Imposto":"{:,.0f} €", "RL":"{:,.0f} €",
             "Capex":"{:,.0f} €", "Depreciacao":"{:,.0f} €", "NWC €":"{:,.0f} €", "DeltaNWC":"{:,.0f} €", "FCFF":"{:,.0f} €"
         }), use_container_width=True)
 
