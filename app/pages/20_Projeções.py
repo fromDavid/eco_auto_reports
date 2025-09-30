@@ -147,10 +147,10 @@ df_otim = projecao(vendas0, cv_pct, cf, debt, rate, taxa_irc, capex_pct, dep_ano
 
 # --- KPIs ---
 k1,k2,k3,k4 = st.columns(4)
-k1.metric("RL final (Base)", f"{df_base['RL'].iloc[-1]:,.0f}")
-k2.metric("RL final (Pess)", f"{df_pess['RL'].iloc[-1]:,.0f}")
-k3.metric("RL final (Otim)", f"{df_otim['RL'].iloc[-1]:,.0f}")
-k4.metric("FCFF acumulado (Base)", f"{df_base['FCFF'].sum():,.0f}")
+k1.metric("RL final (Base)", f"{df_base['RL'].iloc[-1]:,.0f}".replace(",", " ") + " €")
+k2.metric("RL final (Pess)", f"{df_pess['RL'].iloc[-1]:,.0f}".replace(",", " ") + " €")
+k3.metric("RL final (Otim)", f"{df_otim['RL'].iloc[-1]:,.0f}".replace(",", " ") + " €")
+k4.metric("FCFF acumulado (Base)", f"{df_base['FCFF'].sum():,.0f}".replace(",", " ") + " €")
 
 # --- Gráficos ---
 c1, c2 = st.columns(2)
