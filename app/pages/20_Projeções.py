@@ -93,10 +93,10 @@ def projecao(vendas0, cv_pct, cf, debt, rate, taxa_irc, capex_pct, dep_anos, nwc
 # --- Inputs ---
 with st.sidebar:
     st.header("Dados Base (Ano 0)")
-    vendas0 = st.number_input("Vendas Ano 0", min_value=0.0, value=250000.0, step=1000.0, format="%.2f")
+    vendas0 = st.number_input("Vendas Ano 0", min_value=0.0, value=25000.0, step=1000.0, format="%.2f")
     cv_pct = st.number_input("CV (% das Vendas)", min_value=0.0, max_value=100.0, value=52.0, step=0.5, format="%.2f")/100.0
-    cf = st.number_input("CF (Custos Fixos)", min_value=0.0, value=75000.0, step=1000.0, format="%.2f")
-    debt = st.number_input("Dívida Financeira (saldo)", min_value=0.0, value=80000.0, step=1000.0, format="%.2f")
+    cf = st.number_input("CF (Custos Fixos)", min_value=0.0, value=7500.0, step=1000.0, format="%.2f")
+    debt = st.number_input("Dívida Financeira (saldo)", min_value=0.0, value=8000.0, step=1000.0, format="%.2f")
     rate = st.number_input("Taxa de juro (a.a.)", min_value=0.0, max_value=100.0, value=5.0, step=0.25, format="%.2f")/100.0
     taxa_irc = st.number_input("Taxa de IRC", min_value=0.0, max_value=100.0, value=21.0, step=0.5, format="%.2f")/100.0
 
